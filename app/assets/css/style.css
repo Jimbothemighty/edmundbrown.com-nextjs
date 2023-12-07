@@ -1,0 +1,1988 @@
+body {
+    color: #222222;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+   
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+   
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+   }
+   
+   textarea:focus, input:focus{
+     outline: none;
+   }
+   
+   html {
+     height : 100%;
+   }
+   
+   body {
+       font-size: 100%;
+       position: relative;
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+       /* font-family: Verdana; */
+       display: flex;
+       flex-direction: column;
+       overflow-y: auto;
+       background-color: white;
+       height: 100%;
+   }
+   
+   *, input, button, select, textarea,
+   input::placeholder, textarea::placeholder {
+     /* font-family: 'Roboto', sans-serif;
+     -webkit-tap-highlight-color: transparent; */
+   }
+
+   h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0 10px;
+   }
+
+   h1 {
+    font-size: 2em;
+   }
+
+   h2 {
+    font-size: 1.6em;
+   }
+
+   h3 {
+    font-size: 1.4em;
+   }
+
+   h4 {
+    font-size: 1.3em;
+   }
+
+   h5 {
+    font-size: 1.2em;
+   }
+
+   h6 {
+    font-size: 1.1em;
+   }
+   
+   h1, h2 {
+     margin-top: 3px;
+   }
+
+   p {
+    margin: 0 10px;
+   }
+   
+   #outerWrapper {
+       padding: 10px;
+       overflow-y: auto;
+       flex-grow: 1;
+       z-index: 1;
+       background-color: #FAFAFA;
+   }
+   
+   label {
+       min-width: 130px;
+       display: inline-block;
+   }
+   
+   input, button, select, textarea {
+       width: 240px;
+       padding: 10px;
+       border: 1px solid lightgray;
+       border-radius: 10px;
+       margin-bottom: 10px;
+       box-sizing: border-box;
+       font-size: 1.2em;
+   }
+   
+   textarea {
+       width: 100%;
+       resize: none;
+   }
+   
+   .required_field_err_msg {
+       color: red;
+   }
+   
+   input[type="checkbox"] {
+       vertical-align: middle;
+       height: 20px;
+       width: 20px;
+       margin: 0;
+   }
+   
+   input[type="file"] {
+     width: auto;
+   }
+   
+   label {
+       vertical-align: middle;
+       margin: 0px 5px;
+   }
+   
+   button {
+       background: linear-gradient(90deg, rgba(44,62,80,1) 0%, rgba(52,73,94,1) 35%);
+       color: white;
+       box-sizing: border-box;
+       border: none;
+       font-weight: bold;
+       height: 50px;
+       cursor: pointer;
+   }
+   
+   .gradientButton {
+     padding: 4px;
+     background: linear-gradient(90deg, rgba(44,62,80,1) 0%, rgba(52,73,94,1) 35%);
+     border-radius: 20px;
+     min-width: 200px;
+   }
+   
+   .gradientButton > div {
+     width: 100%;
+     background-color: #2980b9;
+     box-sizing: border-box;
+     border: none;
+     font-weight: bold;
+     height: 50px;
+     border-radius: 16px;
+     text-align: center;
+     line-height: 50px;
+     background-color: white;
+     color: #222;
+     cursor: pointer;
+   }
+   
+   a {
+       text-decoration: none;
+       color: black;
+   }
+   
+   table {
+       margin: 5px;
+       border-collapse: collapse;
+       font-size: 2em;
+   }
+   
+   th {
+       background-color: lightgrey;
+   }
+   
+   th, td {
+       padding: 5px;
+       border: 1px solid gray;
+   }
+   
+   .dashCol {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+   }
+   
+   #actionsContainer {
+       /* padding: 5px; */
+   }
+   
+   .newFormLink {
+     cursor: pointer;
+   }
+   
+   .enterGameButton {
+       /* width: 100%; */
+       height: 40px;
+       /* background-color: #2980b9; */
+       float: right;
+       color: white;
+       text-align: center;
+       vertical-align: middle;
+       line-height: 40px;
+       /* padding: 2px 15px; */
+       /* border-radius: 7px; */
+       color: #222;
+       font-weight: bold;
+       text-align: center;
+     flex-grow: 1;
+     cursor: pointer;
+   }
+   
+   .buttonStyle {
+       min-width: 130px;
+       height: 35px;
+       background-color: #2980b9;
+       float: right;
+       color: white;
+       text-align: center;
+       vertical-align: middle;
+       line-height: 35px;
+       padding: 2px 15px;
+       border-radius: 7px;
+       box-sizing: border-box;
+       cursor: pointer;
+   }
+   
+   .buttonMargin {
+     margin: 2px;
+   }
+   
+   .bgOK {
+     background-color: #34495e;
+     color: white;
+   }
+   
+   .bgOK:hover {
+     color: #34495e;
+     background-color: #f4f4f4;
+     border: 1px solid #34495e;
+   }
+   
+   .bgError {
+     background-color: #c0392b;
+     color: white;
+   }
+   
+   .bgError:hover {
+     color: #c0392b;
+     background-color: #f4f4f4;
+     border: 1px solid #c0392b;
+   }
+   
+   .resultContainer {
+       display: flex;
+       justify-content: space-between;
+   }
+   
+   .newThreadLink:hover {
+       text-decoration: underline;
+       cursor: pointer;
+   }
+   
+   .threadListItem, .postListItem {
+       padding: 10px;
+       margin: 2px;
+       background-color: lightgray;
+   }
+   
+   .threadListItem, .postListItem {
+       padding: 10px;
+       margin: 2px;
+       background-color: white;
+     border-radius: 5px;
+     border: 1px solid lightgrey;
+     box-shadow: 0px 1px 2px lightgray;
+     background-color: white;
+   }
+   
+   .threadListItem_only {
+     display: flex;
+     justify-content: space-between;
+     line-height: 24px;
+   }
+   
+   .threadListItem:hover {
+       transform: scale(1.01);
+       cursor: pointer;
+   }
+   
+   .formBlock {
+     padding: 10px;
+     border-radius: 10px;
+     background-color: #EEE;
+     display: flex;
+     flex-direction: column;
+     box-shadow: 0px 0px 2px #888;
+   }
+   
+   #newForm form {
+     padding: 0px;
+   }
+   
+   #newForm .postingAsLabel {
+     padding-right: 10px;
+     line-height: 60px;
+     color: white;
+     font-size: 1.2em;
+   }
+   
+   #newForm .postingAsPic {
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 40px;
+     height: 40px;
+     border-radius: 50px;
+   }
+   
+   .chapterNavigation {
+     display: flex;
+     justify-content: space-between;
+     color: white;
+     padding: 10px;
+     height: 46px;
+     min-height: 46px;
+     max-height: 46px;
+     box-sizing: border-box;
+   }
+   
+   .chapterNavigation span,
+   .chapterNavigation i {
+     color: white;
+   }
+   
+   #characterSelectionDropdownContainer {
+     display: flex;
+     position: absolute;
+     z-index: 999;
+     top: 0;
+     right: 10px;
+     cursor: pointer;
+     line-height: 60px;
+     height: 60px;
+     align-items: center;
+   }
+   
+   #changeCharLink {
+     display: none;
+   }
+   
+   #createPostButton {
+     margin-bottom: 0px;
+     border-radius: 0px;
+   }
+   
+   #newForm.newThreadForm form {
+     padding: 10px;
+   }
+   
+   #newForm.newThreadForm button {
+     margin-left: 10px;
+   }
+   
+   #newForm #newFormTitle {
+     border-radius: 0px;
+     margin-bottom: 0px;
+   }
+   
+   @media screen and (max-width: 768px) {
+     #newForm.newThreadForm form {
+       padding: 0px;
+     }
+   
+     #newForm.newThreadForm button {
+       margin-left: 0px;
+     }
+   
+     #newForm.newThreadForm #newFormTitle {
+       margin-top: 50px;
+       margin-bottom: 50px;
+     }
+   }
+   
+   
+   #rollCharFormInputs {
+       display:flex; 
+       justify-content: space-between;
+   }
+   
+   .myCharacterResultContainer {
+     display: flex;
+   }
+   
+   .myCharacterResult {
+       display: flex;
+   }
+   
+   .postPic {
+     padding: 20px 10px 20px 0px;
+   }
+   
+   
+   .postListItem {
+     flex-direction: column;
+   }
+   
+   .postListItemImage {
+     /* height: 100%; */
+     float: left;
+     margin: 0px 10px 10px 0px;
+   }
+   
+   .postListItemImage img {
+     width: 100px;
+   }
+   
+   .postPic h4 {
+     margin-top: 0px;
+   }
+   
+   .postPic p {
+     margin: 0px;
+   }
+   
+   .postPic {
+     padding: 5px 10px 0px 0px;
+   }
+   
+   
+   @media screen and (max-width: 550px) {
+       .gradientButton {
+         width: calc(100% - 8px);
+       }
+   
+       #actionsContainer {
+           justify-content: start;
+       }
+   
+       input, button, select {
+           width: 100%;
+       }
+   }
+   
+   @media only screen and (max-width: 960px) {
+       table {
+           font-size: 1.2em;
+       }
+   }
+   
+   @media only screen and (max-width: 760px) {
+       table {
+           font-size: 1em;
+       }
+   
+       .myCharacterResultContainer {
+         flex-direction: column;
+       }
+   
+       .myCharacterResult {
+         margin-bottom: 10px;
+       }
+   
+       .postListItemImage {
+         height: unset;
+       }
+   
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /* header */
+   
+   .navBar {
+       background-color: #34495e;
+       box-shadow: 0px 4px 5px #00000033;
+       position: sticky;
+       top: 0;
+       width: 100%;
+       z-index: 3;
+   }
+   
+   .logo {
+       padding: 20px;
+       color: #f4f4f4;
+       line-height: 46px;
+   }
+   
+   .logo a {
+     color: #F4F4F4;
+   }
+   
+   .navBar ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     overflow: hidden;
+     /* background-color: #fff; */
+   }
+   
+   .navBar li a {
+     display: block;
+     padding: 20px 20px;
+     border-left: none;
+     text-decoration: none;
+     color: #f4f4f4;
+   }
+   
+   .navBar li a:hover,
+   .navBar .menu-btn:hover {
+     background-color: #f4f4f4;
+     color: #34495e;
+   }
+   
+   .navBar .navBarListItem {
+     cursor: pointer;
+   }
+   
+   .header .logo {
+     display: block;
+     float: right;
+     font-size: 2em;
+     padding: 10px 20px;
+     text-decoration: none;
+   }
+   
+   /* menu */
+   
+   .navBar .menu {
+     clear: both;
+     max-height: 0;
+     transition: max-height .2s ease-out;
+     will-change: transition;
+   }
+   
+   /* menu icon */
+   
+   .navBar .menu-icon {
+     cursor: pointer;
+     display: inline-block;
+     float: right;
+     padding: 22px 20px;
+     position: relative;
+     user-select: none;
+     min-width: unset;
+   }
+   
+   .navBar .menu-icon .navicon {
+     background: #f4f4f4;
+     display: block;
+     height: 2px;
+     position: relative;
+     transition: background .2s ease-out;
+     width: 18px;
+   }
+   
+   .navBar .menu-icon .navicon:before,
+   .navBar .menu-icon .navicon:after {
+     background: #f4f4f4;
+     content: '';
+     display: block;
+     height: 100%;
+     position: absolute;
+     transition: all .2s ease-out;
+     width: 100%;
+   }
+   
+   .navBar .menu-icon .navicon:before {
+     top: 5px;
+   }
+   
+   .navBar .menu-icon .navicon:after {
+     top: -5px;
+   }
+   
+   /* menu btn */
+   
+   .navBar .menu-btn {
+     display: none;
+   }
+   
+   .navBar .menu-btn:checked ~ .menu {
+     max-height: 360px;
+   }
+   
+   .navBar .menu-btn:checked ~ .menu-icon .navicon {
+     background: transparent;
+   }
+   
+   .navBar .menu-btn:checked ~ .menu-icon .navicon:before {
+     transform: rotate(-45deg);
+   }
+   
+   .navBar .menu-btn:checked ~ .menu-icon .navicon:after {
+     transform: rotate(45deg);
+   }
+   
+   .navBar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+   .navBar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+     top: 0;
+   }
+   
+   /* 82em = 1238px */
+   
+   @media (min-width: 768px) {
+     .navBar li {
+       float: left;
+     }
+     .navBar li a {
+       padding: 13px 30px;
+       border-left: 1px solid #f4f4f4;
+     }
+     .navBar .menu {
+       clear: none;
+       float: right;
+       max-height: none;
+     }
+     .navBar .menu-icon {
+       display: none;
+     }
+   }
+   
+   
+   .topBarIcons {
+     padding: 0px 20px 0px 0px;
+     vertical-align: middle;
+   }
+   
+   .bottomBarIcons {
+     vertical-align: middle;
+   }
+   
+   @media only screen and (max-width: 960px) {
+     table {
+         font-size: 1.2em;
+     }
+   }
+   
+   @media only screen and (max-width: 760px) {
+     table {
+         font-size: 1em;
+     }
+   
+     #rollCharFormInputs {
+       flex-direction: column;
+     }
+   
+     /* .topBarIcons {
+       padding: 0px 10px 0px 0px;
+     }
+   
+     .bottomBarIcons {
+       padding: 0px 10px 0px 0px;
+     } */
+   
+     textarea {
+       width:100%;
+     }
+   
+     input[type="file"] {
+       width: 100%;
+     }
+   }
+   
+   
+   
+   
+   
+   
+   
+   /* jquery ui styles */
+   
+   .ui-widget.ui-widget-content {
+       padding: 0px;
+       border: 1px solid rgb(204, 204, 204);
+       margin: 0px;
+       border-radius: unset;
+   }
+   
+   .ui-widget-header {
+       background: #34495e !important;
+       color: #f4f4f4 !important;
+   }
+   
+   .ui-dialog .ui-dialog-titlebar {
+     padding: .7em 1em;
+   }
+   
+   #editCharacterFormContainer {
+     width: 100%;
+   }
+   
+   #editCharacterForm {
+     padding: 10px;
+   }
+   
+   #editCharacterForm input, 
+   #editCharacterForm button, 
+   #editCharacterForm select, 
+   #editCharacterForm textarea {
+     width: 100% !important;
+     box-sizing: border-box;
+   }
+   
+   .profilePic,
+   #characterPic {
+       position: relative;
+       max-width: 200px;
+       min-width: 200px;
+       height: 200px;
+       border-radius: 200px;
+       background-color: skyblue;
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center;
+   }
+   
+   #editCharacterDetailsContainer {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   /*******************************************/
+   /* find games */
+   
+   #searchOptions, #searchComments {
+     display: flex;
+     padding: 10px;
+   }
+   
+   #searchComments {
+     margin-bottom: 10px;
+   }
+   
+   .cardList {
+     display: flex;
+     flex-wrap: wrap;
+     position: relative;
+     justify-content: center;
+   }
+   
+   .cardItem {
+       /* padding: 10px; */
+       /* margin: 2px; */
+       margin-bottom: 8px;
+       background-color: white;
+       border-radius: 5px;
+       box-shadow: 0px 4px 5px lightgray;
+       background-color: white;
+       border: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     max-height: 80%;
+   }
+   
+   .cardItemHeader {
+       width: 100%;
+       padding: 10px;
+       box-sizing: border-box;
+       border-bottom: 1px solid lightgrey;
+       margin-bottom: 10px;
+       background-color: blue;
+       color: white;
+       font-weight: bold;
+       border-radius: 5px 5px 0px 0px;
+       background: #2D96E5;
+       /* background: -webkit-linear-gradient(bottom right, #2D96E5, #0844C2);
+       background: -moz-linear-gradient(bottom right, #2D96E5, #0844C2);
+     background: linear-gradient(to top left, #2D96E5, #0844C2); */
+     background: rgb(48,165,98);
+     background: linear-gradient(90deg, rgba(44,62,80,1) 0%, rgba(52,73,94,1) 35%); 
+   }
+   
+   .cardItemInfo {
+     text-align: left;
+     padding: 0px 10px;
+       display: flex;
+     flex-direction: column;
+     max-height: calc(100% - 50px); /* minus 50px or else overflows the buttons at the bottom of the Alert or Confirm dialogs */
+   }
+   
+   .cardItemImage {
+       width: 100px;
+       height: 100px;
+       background-position: center;
+       background-size: cover;
+       border: 1px solid #CCC;
+       box-shadow: 2px 2px 5px #BBB;
+   }
+   
+   .cardItem .left {
+       min-width: 150px;
+       height: auto;
+     width: 100%;
+     text-align: left;
+     overflow-y: hidden;
+   }
+   
+   .cardItem .right {
+       flex-grow: 1;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       border-top: 1px solid lightgrey;
+       font-weight: bold;
+       margin-top: 10px;
+       flex-direction: row;
+       justify-content: stretch;
+     text-align: center;
+     height: 40px;
+     max-height: 40px;
+   }
+   
+   .cardItem .right > div {
+     border-radius: 0px 0px 5px 5px;
+   }
+   
+   .cardItem .right.multipleChildren > div:first-child {
+     border-right: 1px solid lightgrey;
+   }
+   
+   .cardItem .right.multipleChildren > div:last-child {
+     border-radius: 0px 0px 5px 0px;
+   }
+   
+   .cardItem .right.multipleChildren > div:first-child {
+     border-radius: 0px 0px 0px 5px;
+   }
+   
+   
+   .spanLbl {
+     display: inline-block;
+     min-width: 150px;
+     font-weight: 600;
+     margin: 0px;
+   }
+   
+   .editImageFloatingButton {
+       position: absolute;
+       bottom: 0px;
+       right: 0;
+       height: 50px;
+       width: 50px;
+       background-color: #DDD;
+       border-radius: 50px;
+       padding: 0;
+       border: 5px solid #F8F8F8;
+       font-size: 1.7em !important;
+       text-align: center;
+       line-height: 45px !important;
+       margin: 5px;
+       cursor: pointer;
+   }
+   
+   body {
+     max-height: 100%;
+     max-width: 100%;
+   }
+   
+   #displayPicImg {
+     display: block;
+     max-width: 100%;
+     max-height: 100%;
+   }
+   
+   .buttonRow {
+     display: flex;
+     justify-content: space-around;
+   }
+   
+   .iconButton {
+       width: 35px;
+       height: 35px;
+       text-align: center;
+       padding: 0;
+   }
+   
+   @media screen and (min-width: 550px) {
+     .cardItem {
+       max-width: 350px;
+       min-width: 350px;
+       margin-left: 2px;
+       margin-right: 2px;
+     }
+   
+     .newPostsItem {
+       margin-left: 2px;
+       margin-right: 2px;
+     }
+   }
+   
+   @media screen and (max-width: 550px) {
+     .cardItem, .resultContainer, .myCharacterResult {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+   
+     #searchOptions, #searchComments {
+       padding: 0px;
+     }
+   
+     #searchComments {
+       margin-bottom: 10px;
+     }
+   
+     .resultContainer > div:first-child {
+       margin-bottom: 3px;
+     }
+   
+     .resultContainer > div {
+       width: 100%;
+     }
+   
+     .resultContainer > div .buttonStyle {
+       width: 100%;
+     }
+   
+     .enterGameButton {
+       width: 100%;
+       box-sizing: border-box;
+     }
+   
+     .cardItem {
+       width: 100%;
+     }
+   
+     .left {
+       margin-bottom: 3px;
+       text-align: center;
+     }
+   
+     .right {
+       width: 100%;
+     }
+   
+     .left > span {
+       display: flex;
+       flex-direction: column;
+     }
+   }
+   
+   
+   .green {
+     color: #34495e;
+   }
+   
+   .red {
+     color: #c0392b;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /* tinyMCE responsive bugfix */
+   .tox .tox-toolbar--scrolling {
+     flex-wrap: wrap;
+   }
+   
+   
+   /* jquery dialog custom styles */
+   .ui-draggable .ui-dialog-titlebar {
+       height: 32px !important;
+       border-radius: 0px !important;
+       line-height: 32px !important;
+   }
+   
+   .ui-widget.ui-widget-content {
+       border: none !important;
+       width: 100% !important;
+   }
+   
+   .ui-dialog .ui-dialog-titlebar-close {
+       top: 40% !important;
+       width: 30px !important;
+       height: 30px !important;
+   }
+   
+   
+   .notification {
+       width: 100%;
+       position: absolute;
+       left: 0;
+     top: 60px;
+     display: none;
+     z-index: 101;
+   }
+   
+   .notification .content {
+       margin: 10px;
+       padding: 20px 10px;
+       background-color: #F8F8F8;
+       box-sizing: border-box;
+       border: 5px solid #34495e;
+       border-radius: 5px;
+     box-shadow: 0px 2px 7px #555;
+     font-size: 1.2em;
+   }
+   
+   .inlineLink {
+     border-radius: 5px;
+     background: linear-gradient(90deg, rgba(44,62,80,1) 0%, rgba(52,73,94,1) 35%);
+     color: white;
+     padding: 3px 10px;
+     width: unset;
+     height: unset;
+     font-size: 1em;
+     cursor: pointer;
+       box-sizing: border-box;
+       border: none;
+     font-weight: bold;
+     display: inline-block;
+   }
+   
+   .newPostsItem {
+     display: flex;
+       align-items: center;
+       padding: 5px;
+       border: 1px solid lightgrey;
+       border-radius: 5px;
+     box-shadow: 0px 2px 5px #CCC;
+     cursor: pointer;
+     margin-bottom: 20px;
+     background-color: white;
+     font-size: 0.8em;
+   }
+   
+   .newPostsItem .textWrapper {
+     text-overflow: ellipsis;
+     overflow: hidden;
+     width: 100%;
+   }
+   
+   .newPostsItem .textWrapper h2 {
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: 1.3em;
+   }
+   
+   .newPostsItem .gameImage {
+       width: 100px;
+     height: 100px;
+     min-width: 100px;
+     min-height: 100px;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+     margin-right: 10px;
+     border-radius: 3px;
+   }
+   
+   .charListItem {
+       display: flex;
+       align-items: center;
+       padding: 5px;
+       border: 1px solid lightgrey;
+       border-radius: 5px;
+     box-shadow: 0px 2px 5px #CCC;
+     margin-bottom: 10px;
+     cursor: pointer;
+   }
+   
+   .charListItem .charImage {
+       width: 70px;
+       height: 70px;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       border-radius: 100px;
+     border: 1px solid lightgray;
+     margin-right: 10px;
+   }
+   
+   .charListItem .charName {
+       font-weight: bold;
+   }
+   
+   .charListItem .charOwnerWrapper {
+     display: inline-block;
+   }
+   
+   .charListItem .charOwner {
+     display: flex;
+     align-items: center;
+     background-color: #EEE;
+     border-radius: 5px;
+     padding: 2px 8px 2px 2px;
+   }
+   
+   .charListItem .charOwner .charImage {
+       width: 15px;
+       height: 15px;
+   }
+   
+   .charListItem .charOwner .charOwnerPublicName {
+     font-size: 0.6em;
+   }
+   
+   .subscribeSwitch {
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     flex-direction: row-reverse;
+     margin-bottom: 10px;
+   }
+   
+   .subscribeSwitch .switch {
+     margin-left: 0px;
+   }
+   
+   .modalPage {
+     width: 100% !important;
+     height: 100% !important;
+     position: absolute !important;
+     top: 0 !important;
+     left: 0 !important;
+     background-color: #F8F8F8 !important;
+     z-index: 100 !important;
+     padding: 0px !important;
+   }
+   
+   .modalPage .titleBar {
+     width: 100%;
+     height: 60px;
+     line-height: 60px;
+     background-color: #34495e;
+     color: white;
+     font-size: 1.5em;
+     font-weight: bold;
+   }
+   
+   .modalPage .titleBar i {
+     font-size: 1.8em;
+     margin: 0px 10px;
+   }
+   
+   .modalPage .modalContent {
+     padding: 10px;
+     box-sizing: border-box;
+   }
+   
+   .gameFloatingActionButton {
+     position: absolute;
+     bottom: 60px;
+     right: 10px;
+     height: 50px;
+     width: 50px;
+     background-color: #34495e;
+     z-index: 1;
+     text-align: center;
+     vertical-align: middle;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     border-radius: 50px;
+     color: white;
+     font-size: 1.2em;
+     cursor: pointer;
+   }
+   
+   .gameBottomBar {
+       width: 100%;
+       height: 46px;
+       background-color: #34495e;
+       display: flex;
+       justify-content: space-around;
+     box-shadow: 0px -4px 5px #00000033;
+     align-items: center;
+     flex-shrink: 0;
+     z-index: 1;
+   }
+   
+   .gameBottomBar i {
+     line-height: 1;
+     color: white;
+     cursor: pointer;
+   }
+   
+   .gameBottomBar i.active {
+       border-radius: 100px;
+       background-color: white;
+       color: #34495e;
+       width: 30px;
+       height: 30px;
+       line-height: 30px;
+       text-align: center;
+       padding: 0;
+   }
+   
+   .pageTab {
+     padding: 10px;
+     overflow-y: auto;
+     flex-grow: 1;
+     background-color: #FAFAFA;
+   }
+   
+   .gameImage {
+       width: 100%;
+       height: 180px;
+       border-radius: 0px;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       position: sticky;
+   }
+   
+   #gamePicImage {
+     background-position: center;
+       background-repeat: no-repeat;
+       background-size: contain;
+   }
+   
+   .characterImage {
+     width: 150px;
+     height: 150px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 100px;
+     border: 1px solid lightgray;
+     margin-right: 10px;
+   }
+   
+   .gameImageContainer {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+   }
+   
+   .gameImageContainer h2 {
+       position: absolute;
+       bottom: 0;
+       padding: 0;
+       margin: 10px;
+       color: white;
+       text-shadow: 0px 0px 5px black;
+   }
+   
+   .flex {
+     display: flex;
+   }
+   
+   .flexContainer {
+     display: flex;
+     justify-content: space-between;
+   }
+   
+   .column {
+     flex-direction: column;
+   }
+   
+   .center {
+     align-items: center;
+   }
+   
+   .scroller {
+     width: 100%;
+     min-height: 120px;
+     position: relative;
+     /* flex-direction: column; */
+     overflow-y:scroll;
+     overflow-x:hidden;
+   }
+   
+   @media screen and (max-width: 550px) {
+     .scroller {
+       overflow-y: auto;
+     }
+   }
+   
+   #myGames.scroller {
+     overflow-x: scroll;
+   }
+   
+   .gameItem {
+       /* height: 70px; */
+       width: 100px;
+       flex-shrink: 0;
+       margin: 5px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+     align-items: center;
+     cursor: pointer;
+   }
+   
+   .gameItem .gameItemImage {
+       height: 60px;
+       width: 100px;
+       background-color: #EEE;
+       background-size: cover;
+     background-position: center;
+     border-radius: 3px;
+   }
+   
+   .gameItem .gameItemText {
+       /* height: 20px; */
+       width: 100px;
+       /* line-height: 20px; */
+       color: #222;
+       text-align: center;
+       /* white-space: nowrap; */
+       /* text-overflow: ellipsis; */
+       /* overflow: hidden; */
+     font-size: 0.6em;
+     margin-top: 5px;
+   }
+   
+   .newPostsItem, .gameItem, .cardItem, .postListItem, .threadListItem, 
+   .newPostsItem.ghost, .gameItem.ghost, .cardItem.ghost {
+     /*opacity: 0;*/ /* we will fade this in on every screen */
+   }
+   
+   
+   /* ACTION LIST CSS */
+   
+   .actionListContainer {
+       position: absolute;
+       bottom: 0px;
+       left: 0px;
+       width: 100%;
+       height: 50%;
+       background-color: transparent;
+       z-index: 999;
+       box-sizing: border-box;
+   }
+   
+   .actionList {
+       width: 100%;
+       height: 100%;
+       background-color: white;
+       box-shadow: 0px -4px 15px #CCC;
+       border-radius: 20px 20px 0px 0px;
+       padding: 20px;
+       box-sizing: border-box;
+       display: flex;
+       flex-direction: column;
+   }
+   
+   .actionList .titleBar {
+       display: flex;
+       box-sizing: border-box;
+       padding-bottom: 20px;
+   }
+   
+   .backIcon {
+     cursor: pointer;
+   }
+   
+   .actionList .titleBar h3.actionListTitle {
+       display: inline-block;
+       flex-grow: 1;
+       margin: 0;
+   }
+   
+   .actionList .actionListContent {
+       overflow-y: auto;
+     max-height: 100%;
+   
+     display: flex;
+     flex-wrap: wrap;
+   }
+   
+   .actionList .actionListContent .actionListItem,
+   .actionList .actionListContent .actionListImageItem {
+     width: 100%;
+   }
+   
+   .actionList .actionListContent .actionListItem,
+   .actionList .actionListContent .actionListImageItem,
+   .actionList .actionListContent .actionListBgImageItem {
+       cursor: pointer;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+   }
+   
+   .actionList .actionListContent .actionListImageItem .actionListItemImage {
+       height: 50px;
+       width: 50px;
+       border-radius: 50px;
+       border: 1px solid #CCC;
+     margin-right: 10px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   
+   .actionListBgImageItemContainer {
+     padding: 10px;
+     box-sizing: border-box;
+       width: 200px;
+       height: 200px;
+   }
+   
+   @media screen and (max-width: 550px) {
+     .actionListBgImageItemContainer {
+       width: 100%;
+     }
+   }
+   
+   .actionList .actionListContent .actionListBgImageItem {
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+   
+       box-sizing: border-box;
+       width: 100%;
+       height: 100%;
+   }
+   
+   /* END ACTION LIST CSS */
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /* GAME IMAGE SELECTOR */
+   
+   .gameImageSelector {
+       height: 35px;
+       border-radius: 10px;
+       margin-bottom: 10px;
+       display: flex;
+       background: linear-gradient(90deg, rgba(44,62,80,1) 0%, rgba(52,73,94,1) 35%);
+       color: white;
+     border: none;
+     max-width: 550px;
+   }
+   
+   .gameImageSelector > div {
+     border-left: 1px solid white;
+   }
+   
+   .gameImageSelector :first-child {
+     border-left: none;
+   }
+   
+   .gameImageSelectorItem {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+     align-items: center;
+     cursor: pointer;
+   }
+   
+   @media screen and (max-width: 550px) {
+     .gameImageSelector {
+       width: 100%;
+       max-width: 100%;
+     }
+   }
+   
+   /* END GAME IMAGE SELECTOR */
+   
+   
+   
+   
+   
+   /* CONFIRM DIALOG */
+   
+   .confirmDialog {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 10px;
+     box-sizing: border-box;
+     background-color: #000A;
+     z-index: 999;
+   }
+   
+   .confirmDialog .cardItem {
+     box-shadow: 0px 4px 15px #444; 
+   }
+   
+   /* END CONFIRM DIALOG */
+   
+   
+   
+   
+   
+   /* IMAGE EDITOR */
+   
+   
+   .imageContainer {
+     margin-bottom: 20px;
+   }
+   
+   
+   /* END IMAGE EDITOR */
+   
+   
+   
+   
+   
+   
+   /* new game page */
+   
+   #categoryList {
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 5px;
+   }
+   
+   .categoryLabel {
+     padding: 5px 15px;
+     border: 2px solid #34495e;
+     border-radius: 15px;
+     margin-right: 5px;
+     margin-bottom: 5px;
+     background-color: white;
+     cursor: pointer;
+   }
+   
+   .categoryLabel.selected {
+     border: 2px solid black;
+     background-color: #34495e;
+     color: white;
+   }
+   
+   /* end new game page */
+   
+   
+   
+   /* t&c */
+   
+   .fullScreenPopup,
+   .tAndC {
+       position: fixed;
+       width: 100%;
+       height: 100%;
+       margin: 0px;
+       padding: 0px;
+       box-sizing: border-box;
+       z-index: 999;
+       display: flex;
+       flex-direction: row;
+       justify-content: stretch;
+       align-items: stretch;
+   }
+   
+   .fullScreenPopup > div, 
+   .tAndC > div {
+       box-sizing: border-box;
+   
+       background-color: white;
+       border-radius: 10px;
+       margin: 10px;
+       box-shadow: 0px 2px 5px #666;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+   }
+   
+   .fullScreenPopup .header, 
+   .tAndC .tAndC_header {
+       background: linear-gradient(90deg, rgba(44,62,80,1) 0%, rgba(52,73,94,1) 35%);
+       color: white;
+       box-sizing: border-box;
+       border: none;
+       font-weight: bold;
+     padding: 10px;
+     border-radius: 10px 10px 0px 0px;
+   }
+   
+   .fullScreenPopup .content, 
+   .tAndC .tAndC_content {
+     flex-grow:1; 
+     overflow-y: auto;
+     padding: 10px;
+   }
+   
+   .fullScreenPopup .content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   
+   .fullScreenPopup .bottomBar, 
+   .tAndC .bottomBar {
+       border-top: 1px solid lightgrey;
+       /* margin: 10px; */
+       padding: 10px 10px 0px 10px;
+   }
+   
+   /* end t&c */
+   
+   
+   /*settings page*/
+   .stats_bar {
+     width: 100%;
+     padding: 10px;
+   
+     box-sizing: border-box;
+     display: flex;
+     justify-content: space-around;
+     flex-direction: column;
+   
+     border: none;
+     background: white;
+     flex-grow: 1;
+     border-radius: 15px 15px 0px 0px;
+     box-shadow: 0px -2px 5px lightgrey;
+     margin-top: 10px;
+   }
+   
+   .stats_block {
+     display: flex;
+     justify-content: space-around;
+     text-align: center;
+     flex-grow: 1;
+     flex-wrap: wrap;
+   }
+   
+   .ban {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     flex-basis: 33%
+   }
+   
+   .ban h1, .ban h3 {
+     margin: 2px;
+   }
+   
+   /* end settings page */
+   
+   .ghost {
+     display: none;
+   }
+   
+   .emptyListMsg {
+       position: absolute;
+     display: flex;
+     flex-direction: column;
+       width: 100%;
+       height: 100%;
+       justify-content: center;
+       align-items: center;
+     /* font-size: 2em; */
+     z-index: 1;
+   }
+   
+   .emptyListMsg .emptyListMsgContent {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       background-color: rgba(255,255,255,0.5);
+       padding: 20px;
+       box-shadow: 0px 0px 50px white;
+     border-radius: 20px;
+     text-align: center;
+   }
+   
+   .emptyListMsg .msg {
+     margin-bottom: 10px;
+   }
+   
+   @media screen and (min-width: 768px) {
+     .ghost {
+       display: flex;
+       opacity: 0.5;
+       position: relative;
+     }
+   
+     .ghost .ghostMsg {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       vertical-align: middle;
+       margin: auto;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+     }
+   
+     .ghost .spaceFillerParent {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       height: 90px;
+       flex-grow: 1;
+     }
+   
+     .ghost .spaceFiller {
+       height: 20px;
+       width: 100%;
+       background-color: #EEE;
+       border-radius: 5px;
+     }
+   
+     .ghost .right {
+       border: none;
+     }
+   
+     .mainDashboard .dashCol1 #myGames .ghost.gameItem,
+     .mainDashboard .dashCol2 .ghost.newPostsItem,
+     .ghost.cardItem {
+       box-shadow: 0px 2px 5px #AAA;
+       /* margin-right: 5px; */
+     }
+   
+     .ghost .cardItemHeader {
+       background: #EEE;
+       border: none;
+       min-height: 40px;
+     }
+   
+     .ghost .cardItemInfo .spaceFiller {
+       margin-bottom: 10px;
+     }
+   
+     .ghost .enterGameButton {
+       background-color: #EEE;
+       border: none !important;
+     }
+   
+     /* .mainDashboard {
+       background-color: #DDD;
+     } */
+   
+     .scroller {
+       height: 100%;
+     }
+   
+     .mainDashboard #outerWrapper {
+       padding: 0px;
+       overflow: hidden;
+     }
+   
+     .mainDashboard #resultsContainer {
+       display: flex;
+       justify-content: space-between;
+       height: 100%;
+     }
+   
+     .mainDashboard .dashCol1 {
+       order: 3;
+       display: flex;
+       flex-direction: column;
+     }
+   
+     .mainDashboard .dashCol #myGames,
+     .mainDashboard .dashCol #pendingApplications,
+     .mainDashboard .dashCol #newPosts {
+       flex-direction: column;
+       overflow-y:scroll;
+       overflow-x:hidden;
+     }
+   
+     .mainDashboard .dashCol1 #myGames .gameItem {
+       width: unset;
+       padding: 10px;
+       border-radius: 5px;
+       background-color: white;
+       margin: 0px 5px 20px 0px;
+       flex-direction: row;
+       box-shadow: 0px 2px 5px lightgray;
+     }
+   
+     .mainDashboard .dashCol2 {
+       order: 2;
+       flex-grow: 1;
+     }
+   
+   
+     .mainDashboard .dashCol2 .newPostsItem {
+       box-shadow: 0px 2px 5px lightgray;
+       border: none;
+       
+     }
+   
+     .mainDashboard .dashCol3 {
+       order: 1;
+     }
+   
+     .mainDashboard .dashCol1, 
+     .mainDashboard .dashCol2, 
+     .mainDashboard .dashCol3 {
+       padding: 10px;
+     }
+   }
+   
+   .mainDashboard .hero {
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       background-color: #DDD;
+     /* background-image: url(../../../assets/images/wallpaper/triangles-green.svg);
+     background-image: url(../../../assets/images/wallpaper/planet.jpg); */
+     background-size: cover;
+     background-repeat: no-repeat;
+     position: absolute;
+   }
+   
+   .mainDashboard .hero::before {
+       background-color: #FFF4;
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+     background-color: rgba(255,255,255,1);
+     background-color: whitesmoke;
+   }
+   
+   
+   /* dashboard custom styles */
+   
+   html {
+     --scrollbarBG: transparent;
+     --thumbBG: #BBB;
+   }
+   body::-webkit-scrollbar {
+     width: 8px;
+   }
+   body, .scroller, #outerWrapper, .pageTab, .modalPage {
+     scrollbar-width: thin;
+     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+   }
+   body::-webkit-scrollbar-track,
+   .scroller::-webkit-scrollbar-track,
+   #outerWrapper::-webkit-scrollbar-track,
+   .pageTab::-webkit-scrollbar-track,
+   .modalPage::-webkit-scrollbar-track {
+     background: var(--scrollbarBG);
+   }
+   
+   body::-webkit-scrollbar-thumb,
+   .scroller::-webkit-scrollbar-thumb,
+   #outerWrapper::-webkit-scrollbar-thumb,
+   .pageTab::-webkit-scrollbar-thumb,
+   .modalPage::-webkit-scrollbar-thumb {
+     background-color: var(--thumbBG) ;
+     border-radius: 6px;
+     border: 3px solid var(--scrollbarBG);
+   }
+   
+   /* width */
+   ::-webkit-scrollbar {
+     width: 10px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: transparent;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: #888;
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: #999;
+   }
+   
+   
+   
+   .cardItemInfo {
+     /*overflow-y: scroll;*/
+   }
+   
+   .cardItemInfo p, .cardItemInfo h3 {
+     margin-bottom: 0;
+   }
+   
+   
+   
+   
+   /* COMMENTS WIDGET */
+   .commentsContainer .messengerHeaderComments {
+     width: 100%;
+     display: flex;
+     background-color: lightgray;
+     padding: 10px;
+     box-sizing: border-box;
+   }
+   
+   .commentsContainer {
+     display: flex;
+     height: calc(100% - 60px);
+   }
+   
+   .commentsContainer .comment {
+     border-radius: 5px;
+     padding: 10px;
+     margin-bottom: 5px;
+     background-color: #EFEFEF;
+     display: flex;
+     align-items: center;
+   }
+   
+   .commentsContainer .comment .commentImg {
+     border-radius: 50px;
+     height: 30px;
+     width: 30px;
+     background-color: #DDD;
+     margin-right: 10px;
+   }
+   
+   .commentsContainer .comment .commentBy {
+     display: flex;
+     align-items: center;
+   }
+   
+   .commentsContainer .comment .commentName {
+     font-size: 0.8em;
+     margin-right: 10px;
+   }
+   
+   .commentsContainer .comment .commentDate {
+     font-size: 0.6em;
+   }
+   
+   .commentsContainer .comment .commentMsg {
+     word-wrap: anywhere;
+   }
+   
+   /* userprofile popup */
+   
+   .userProfile .userBans {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+   
+   .userProfile .userBans .ban .banLbl {
+     text-align: center;
+   }

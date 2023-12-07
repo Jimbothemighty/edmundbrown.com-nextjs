@@ -1,0 +1,34 @@
+body {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    background-color: #F8F8F8;
+}
+
+.demoContent {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-content: center; */
+    /* overflow: auto; */
+    /* max-width: 1920px; */
+    margin: 0 auto;
+    flex-grow: 1;
+    /* background-color: white; */
+}
+
+li {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        height: unset;
+        max-height: unset;
+    }
+}

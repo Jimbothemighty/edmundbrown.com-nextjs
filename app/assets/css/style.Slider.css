@@ -1,0 +1,80 @@
+.sliderWrapper {
+    width: 100%;
+}
+
+.sliderWrapper .slideshowContainer {
+    position: relative;
+    box-sizing:border-box;
+}
+
+.sliderWrapper .slideshowContainer .hideSlide {
+    display: none;
+    box-sizing:border-box;
+    height: 100%;
+}
+
+.sliderWrapper .slideshowContainer .prev,
+.sliderWrapper .slideshowContainer .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(102,102,102,0.8);
+}
+
+.sliderWrapper .slideshowContainer .prev {
+    left: 0;
+    right: unset;
+}
+
+.sliderWrapper .slideshowContainer .next {
+    right: 0;
+    left: unset;
+}
+
+.sliderWrapper .slideshowContainer .prev:hover, 
+.sliderWrapper .slideshowContainer .next:hover {
+    background-color: #34495e;
+}
+
+/* The dots/bullets/indicators */
+.sliderButtons .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sliderButtons .active {
+    background-color: #34495e;
+}
+    
+.sliderButtons .dot:hover {
+    background-color: #7f8c8d;
+}
+
+.sliderWrapper .slideshowContainer .slide {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 400px;
+    max-height: 400px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .sliderWrapper .slideshowContainer  { width: 100%; }
+    .sliderWrapper .slideshowContainer .slide { width: 100%; }
+    .sliderWrapper .sliderButtons { order: 2; margin-bottom: 50px; }
+}

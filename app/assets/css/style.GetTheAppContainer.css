@@ -1,0 +1,22 @@
+/* get the app section */
+.getTheAppContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.getTheAppImages {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 550px) {
+    .getTheAppImages {
+        width: 300px;
+    }
+}

@@ -1,0 +1,13 @@
+.platformBlurbContainer {
+    display: flex;
+}
+
+.platformBlurbContainer .mediaContainer {
+    width: 30%;
+    height: 100%;
+}
+
+.platformBlurbContainer .textContainer {
+    width: 70%;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+    .responsiveBlurb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1400px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px 20px 5px 20px;
+        /* line-height: 1.2em; */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .responsiveBlurb .blurb {
+        margin-bottom: 10px;
+    }
